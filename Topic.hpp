@@ -18,7 +18,7 @@ class Topic {
 
         void setQuestions(vector<string> questions);
 
-        string getTopicName();
+        string getTopicName() const;
 
-        vector<string> getQuestions();
+        vector<string> getQuestions() const;
 };

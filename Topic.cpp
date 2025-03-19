@@ -15,10 +15,10 @@ void Topic::setQuestions(vector<string> questions) {
     }
 }
 
-string Topic::getTopicName() {
+string Topic::getTopicName() const{
     return topicName;
 }
 
-vector<string> Topic::getQuestions() {
+vector<string> Topic::getQuestions() const{
     return questions;
 }

@@ -1,25 +1,27 @@
+#ifndef GENERATOR_HPP
+#define GENERATOR_HPP
+
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Topic.hpp"
 
 using namespace std;
 
 class Generator {
     private:
-        vector<string> topics;
+        vector<Topic> topics;
 
     public:
         Generator();
 
-        void setTopics(vector<string> topics)
-        {
-            for (int i = 0; i < 5; i++) {
-                this->topics[i] = topics[i];
-            }
-        }
+        void addTopic(const Topic& topic);
 
-        vector<string> getTopics()
-        {
-            return topics;
-        }
+        void displayTopics() const;
+
+        string generateQuestion(int topicIndex) const;
+
 };
+
+#endif // GENERATOR_HPP
